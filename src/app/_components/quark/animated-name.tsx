@@ -8,9 +8,10 @@ export const AnimatedName = () => {
   const [name, setName] = useState("SOUMYADIP MONI");
   const intervalRef = useRef<number | null>(null);
   const ref = useRef<HTMLHeadingElement | null>(null);
+  const text = "SOUMYADIP MONI";
 
   const handleMouseOver = useCallback(() => {
-    let i = 0;
+    let i = 0;  
     if (intervalRef.current !== null) {
       clearTimeout(intervalRef.current);
     }
@@ -21,7 +22,7 @@ export const AnimatedName = () => {
           .split("")
           .map((_, index) => {
             if (index < i) {
-              return name[index];
+              return text[index];
             }
             return letters[Math.floor(Math.random() * 26)];
           })
