@@ -21,14 +21,14 @@ const Block = ({
 };
 
 export const GridPattern = ({ yOffset = 0, interactive = false, ...props }) => {
-  let id = useId();
-  let ref = useRef<React.ElementRef<"svg">>(null);
-  let currentBlock = useRef<[x: number, y: number]>();
-  let counter = useRef(0);
-  let [hoveredBlocks, setHoveredBlocks] = useState<
+  const id = useId();
+  const ref = useRef<React.ElementRef<"svg">>(null);
+  const currentBlock = useRef<[x: number, y: number]>();
+  const counter = useRef(0);
+  const [hoveredBlocks, setHoveredBlocks] = useState<
     Array<[x: number, y: number, key: number]>
   >([]);
-  let staticBlocks = [
+  const staticBlocks = [
     [1, 1],
     [2, 2],
     [4, 3],
@@ -47,7 +47,7 @@ export const GridPattern = ({ yOffset = 0, interactive = false, ...props }) => {
         return;
       }
 
-      let rect = ref.current.getBoundingClientRect();
+      const rect = ref.current.getBoundingClientRect();
       let x = event.clientX - rect.left;
       let y = event.clientY - rect.top;
       if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
@@ -67,8 +67,8 @@ export const GridPattern = ({ yOffset = 0, interactive = false, ...props }) => {
       currentBlock.current = [x, y];
 
       setHoveredBlocks((blocks) => {
-        let key = counter.current++;
-        let block = [x, y, key] as (typeof hoveredBlocks)[number];
+        const key = counter.current++;
+        const block = [x, y, key] as (typeof hoveredBlocks)[number];
         return [...blocks, block].filter(
           (block) => !(block[0] === x && block[1] === y && block[2] !== key),
         );
@@ -96,8 +96,8 @@ export const GridPattern = ({ yOffset = 0, interactive = false, ...props }) => {
         {staticBlocks.map((block) => (
           <Block
             key={`${block}`}
-            x={block[0] as number}
-            y={block[1] as number}
+            x={block[0]!}
+            y={block[1]!}
           />
         ))}
         {hoveredBlocks.map((block) => (
