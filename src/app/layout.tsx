@@ -25,7 +25,7 @@ export default function RootLayout({
       <body>
         <ThemeWrapper
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
