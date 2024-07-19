@@ -6,13 +6,13 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 export const AnimatedName = () => {
   const [name, setName] = useState("SOUMYADIP MONI");
-  const [intervalId] = useState<number | null>(null);
+  const intervalRef = useRef<number | null>(null);
   const ref = useRef<HTMLHeadingElement | null>(null);
 
   const handleMouseOver = useCallback(() => {
     let i = 0;
-    if (intervalId !== null) {
-      clearTimeout(intervalId);
+    if (intervalRef.current !== null) {
+      clearTimeout(intervalRef.current);
     }
 
     const animate = () => {
@@ -25,15 +25,15 @@ export const AnimatedName = () => {
             }
             return letters[Math.floor(Math.random() * 26)];
           })
-          .join(""),
+          .join("")
       );
       if (i < name.length) {
         i += 1 / 3;
-        setTimeout(animate, 30);
+        intervalRef.current = window.setTimeout(animate, 30);
       }
     };
     animate();
-  }, [intervalId, name]);
+  }, [name]);
 
   useEffect(() => {
     const currentRef = ref.current;
@@ -47,9 +47,15 @@ export const AnimatedName = () => {
         currentRef.removeEventListener("mouseover", handleMouseOver);
       }
     };
-  }, [handleMouseOver, ref]);
+  }, [handleMouseOver]);
 
   return (
-    <h1 className="text-3xl font-medium sm:text-4xl md:text-6xl">{name}</h1>
+    <h1
+      ref={ref}
+      className="text-3xl font-medium sm:text-4xl md:text-6xl"
+      style={{ width: `${name.length}ch` }}
+    >
+      {name}
+    </h1>
   );
 };
