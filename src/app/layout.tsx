@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeWrapper } from "./_components/quark/theme-wrapper";
+import { ResponsiveIndicator } from "./_components/atom/responsive-ind";
 
 export const metadata = {
   title: "Create T3 App",
@@ -29,8 +30,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <main>
+            <TRPCReactProvider>{children}</TRPCReactProvider>
+          </main>
         </ThemeWrapper>
+        <ResponsiveIndicator />
       </body>
     </html>
   );
