@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeWrapper } from "./_components/quark/theme-wrapper";
@@ -20,10 +21,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.variable}`}
       suppressHydrationWarning
     >
-      <body>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} font-mono`}>
         <ThemeWrapper
           attribute="class"
           defaultTheme="dark"
