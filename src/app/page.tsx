@@ -29,9 +29,9 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer noopener"
                 href="https://github.com/AvaterClasher/www"
-                className="text-light-brown transition-colors hover:text-foreground hover:underline decoration-green-300"
+                className="text-light-brown transition-colors hover:text-foreground "
               >
-                &apos;https://github.com/AvaterClasher/www&apos;
+                &apos;<span className="hover:underline decoration-wavy decoration-green-300">https://github.com/AvaterClasher/www</span>&apos;
               </a>
             </p>
           </div>
