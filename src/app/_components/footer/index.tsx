@@ -24,7 +24,6 @@ export const Footer = async () => {
         <button
           aria-label='refetch'
           className='items-center gap-x-2 px-2 py-1 md:flex hidden group hover:text-foreground text-muted-foreground transition-colors'
-          data-umami-event='Refetch weekly coding activity'
         >
           <BiRefresh className='text-xl group-active:rotate-180 transition-transform' />
         </button>
@@ -33,9 +32,9 @@ export const Footer = async () => {
           <Tooltip>
             <TooltipTrigger asChild>
               <div className='items-center gap-x-1 px-2 py-1 md:flex hidden text-muted-foreground'>
-                <BiXCircle className='text-base' />
+                <BiXCircle className='text-base text-red-500' />
                 <p>0</p>
-                <IoWarningOutline className='text-base' />
+                <IoWarningOutline className='text-base text-yellow-300'/>
                 <p>0</p>
               </div>
             </TooltipTrigger>
@@ -49,7 +48,6 @@ export const Footer = async () => {
                 aria-label={todayData?.grand_total.text}
                 href='/coding-activity'
                 className='items-center gap-x-1 px-2 py-1 md:flex hidden text-muted-foreground'
-                data-umami-event='Today coding activity'
               >
                 <AiOutlineClockCircle className='text-base' />
                 <p>{todayData?.grand_total.text}</p>

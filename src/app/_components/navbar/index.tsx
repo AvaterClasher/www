@@ -33,7 +33,7 @@ export const navMenu = [
   },
   {
     name: '_about-me',
-    path: '/about'
+    path: '/about/personal.ts'
   },
   {
     name: '_projects',
