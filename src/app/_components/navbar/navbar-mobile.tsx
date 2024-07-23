@@ -85,17 +85,13 @@ export const navMenu = [
     name: '_about-me',
     child: [
       {
-        name: 'personal.ts',
-        path: '/about/personal.ts'
+        name: 'personal.rs',
+        path: '/about/personal.rs'
       },
       {
-        name: 'work.ts',
-        path: '/about/work.ts'
+        name: 'links.ts',
+        path: '/about/links.ts'
       },
-      {
-        name: 'gear.ts',
-        path: '/about/gear.ts'
-      }
     ]
   },
   {

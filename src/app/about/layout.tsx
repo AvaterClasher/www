@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { SiTypescript } from "react-icons/si";
+import { SiTypescript, SiRust } from "react-icons/si";
 
 import {
   Accordion,
@@ -12,19 +12,10 @@ import { FadeInStagger, FadeIn } from "~/app/_components/atom/fade-in";
 
 const allAbouts = [
   {
-    title: "gear.ts",
-    description:
-      "I'm a software engineer and a designer. I love to build things and I'm always looking for new challenges to solve.",
+    title: "personal.rs",
   },
   {
-    title: "personal.ts",
-    description:
-      "I'm a software engineer and a designer. I love to build things and I'm always looking for new challenges to solve.",
-  },
-  {
-    title: "work.ts",
-    description:
-      "I'm a software engineer and a designer. I love to build things and I'm always looking for new challenges to solve.",
+    title: "links.ts",
   },
 ];
 
@@ -52,7 +43,11 @@ export default function AboutLayout({
                         startWith="/about"
                         title={title}
                       >
-                        <SiTypescript className="h-4 w-4 shrink-0" />
+                        {title === "personal.rs" ? (
+                          <SiRust className="h-4 w-4 shrink-0" />
+                        ) : (
+                          <SiTypescript className="h-4 w-4 shrink-0" />
+                        )}
                         {title}
                       </AsideLink>
                     </Suspense>
