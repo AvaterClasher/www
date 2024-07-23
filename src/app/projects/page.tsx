@@ -19,9 +19,6 @@ export default function ProjectPage({ searchParams }: SearchParamsProps) {
     ? allProjects.filter((project) => project.tag.includes(tag))
     : allProjects;
 
-    console.log(filteredProjects);
-    console.log(tag);
-
   return (
     <FadeInStagger
       className="grid gap-5 p-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
