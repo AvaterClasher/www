@@ -1,0 +1,29 @@
+---
+title: 'Food-101'
+summary: 'This food classifier employs the EffNEtB2 model to categorize 101 distinct types of food, trained on the Food101 dataset. The initial training comprised 10 epochs with a batch size of 32, followed by fine-tuning for an additional 5 epochs with a batch size of 16. The user interface is built using the Gradio API, and the deployed model is hosted on the HuggingFace Spaces platform.'
+image: 'https://res.cloudinary.com/dy8ljbwbj/image/upload/v1721771873/food_ehp1eo.png'
+tag:
+  - Pytorch
+  - Moni
+---
+
+![Food](https://res.cloudinary.com/dy8ljbwbj/image/upload/v1721771873/food_ehp1eo.png)
+
+## Food 101
+
+### Live Demo
+
+<iframe src='https://avaterclasher-food-classifier-refined-moni.hf.space' frameborder='0' width='1400' height='670'></iframe>
+
+This food classifier employs the EffNEtB2 model to categorize 101 distinct types of food, trained on the Food101 dataset. The initial training comprised 10 epochs with a batch size of 32, followed by fine-tuning for an additional 5 epochs with a batch size of 16. The user interface is built using the Gradio API, and the deployed model is hosted on the HuggingFace Spaces platform.
+
+[Visit Website](https://huggingface.co/spaces/AvaterClasher/Food_Classifier_Refined_MONI)
+
+### Stack
+
+- [Pytorch](https://pytorch.org/) - PyTorch is an optimized tensor library for deep learning using GPUs and CPUs.
+- [Pytorch Vision](https://pytorch.org/vision/stable/index.html) - PyTorch vision provides a wide variety of image, video, and other datasets as well as common image transformations for datasets.
+- Based on the [Food101](https://www.kaggle.com/datasets/kmader/food41) Dataset.
+- Used transfer learning with the [EfficientNetB2](https://huggingface.co/transformers/model_doc/efficientnet.html) model.
+- [HuggingFace](https://huggingface.co/) - HuggingFace is a company that develops open-source NLP tools and libraries.
+- Used here with [Gradio API](https://www.gradio.app/) for the demo.
