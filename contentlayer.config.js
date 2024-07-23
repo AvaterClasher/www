@@ -39,7 +39,6 @@ const rehypePrettyOptions = {
   keepBackground: true
 }
 
-/** @type {import('contentlayer/source-files').SourcePlugin} */
 export default makeSource({
   contentDirPath: './src/content',
   documentTypes: [Projects],
