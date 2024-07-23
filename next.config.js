@@ -3,12 +3,21 @@
  * for Docker builds.
  */
 await import("./src/env.js");
+import { withContentlayer } from "next-contentlayer";
 
 /** @type {import("next").NextConfig} */
 const config = {
     eslint: {
         ignoreDuringBuilds: true
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "res.cloudinary.com",
+            },
+        ],
     }
 };
 
-export default config;
+export default withContentlayer(config);
