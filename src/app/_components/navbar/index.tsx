@@ -41,6 +41,6 @@ export const navMenu = [
   },
   {
     name: '_articles',
-    path: '/articles'
+    path: 'https://avater.hashnode.dev'
   }
 ]
