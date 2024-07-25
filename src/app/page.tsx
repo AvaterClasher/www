@@ -31,7 +31,7 @@ export default function Home() {
                 href="https://github.com/AvaterClasher/www"
                 className="text-light-brown transition-colors hover:text-foreground "
               >
-                &apos;<span className="hover:underline decoration-wavy decoration-green-300">https://github.com/AvaterClasher/www</span>&apos;
+                &apos;<span className="hover:underline decoration-wavy decoration-green-300 underline-offset-4">https://github.com/AvaterClasher/www</span>&apos;
               </a>
             </p>
           </div>
