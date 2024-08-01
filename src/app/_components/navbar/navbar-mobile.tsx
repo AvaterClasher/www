@@ -103,21 +103,45 @@ export const navMenu = [
       },
       {
         name: 'React',
-        path: '/projects?tag=react'
+        path: '/projects?tag=React'
       },
       {
-        name: 'Next',
-        path: '/projects?tag=next'
+        name: 'Next.js',
+        path: '/projects?tag=Next.js'
       },
       {
-        name: 'HTML',
-        path: '/projects?tag=html'
+        name: 'Rust',
+        path: '/projects?tag=Rust'
+      },
+      {
+        name: 'Go',
+        path: '/projects?tag=Go'
+      },
+      {
+        name: 'Pytorch',
+        path: '/projects?tag=Pytorch' 
+      },
+      {
+        name: 'Tensorflow',
+        path: '/projects?tag=Tensorflow'
+      },
+      {
+        name: 'Three.js',
+        path: '/projects?tag=Threejs'
+      },
+      {
+        name: 'React Native',
+        path: '/projects?tag=React Native'
+      },
+      {
+        name: 'VITE',
+        path: '/projects?tag=Vite'
       }
     ]
   },
   {
     name: '_articles',
-    path: '/articles'
+    path: 'https://blog.soumyadip.dev'
   },
   {
     name: '_coding-activity',
