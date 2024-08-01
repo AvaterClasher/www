@@ -11,6 +11,8 @@ import { Navbar } from "./_components/navbar";
 import { Footer } from "./_components/footer";
 import { ENV } from "~/lib/constants";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: "Soumyadip Moni",
@@ -73,6 +75,7 @@ export default function RootLayout({
           </main>
         </ThemeWrapper>
         <ResponsiveIndicator />
+        {process.env.NODE_ENV === 'production' && <Analytics /> && <SpeedInsights/>}
       </body>
     </html>
   );
