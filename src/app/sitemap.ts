@@ -8,12 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const WEBSITE_URL = ENV.NEXT_PUBLIC_WEBSITE_URL;
 
   const projects = allProjects.map((project) => ({
-    url: `${WEBSITE_URL}/projects/${project.title}`,
+    url: `${WEBSITE_URL}/projects/${project.title.toLowerCase()}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));
 
   const activities = allActivity.map((activity) => ({
-    url: `${WEBSITE_URL}/coding-activity/${activity.slug}`,
+    url: `${WEBSITE_URL}/coding-activity/${activity.slug.toLowerCase()}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));
 
